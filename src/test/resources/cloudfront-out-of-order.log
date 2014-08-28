@@ -1,0 +1,3 @@
+#Version: 1.0
+#Fields: time x-edge-location sc-bytes c-ip cs-method cs(Host) cs-uri-stem sc-status cs(Referer) cs(User-Agent) date cs-uri-query cs(Cookie) x-edge-result-type x-edge-request-id x-host-header cs-protocol
+04:48:38	SEA50	19740	192.168.0.1	GET	example.cloudfront.net	/media/example.jpg	200	http://example.cloudfront.net/index.html	Mozilla/5.0%2520(Macintosh;%2520Intel%2520Mac%2520OS%2520X%252010.9;%2520rv:31.0)%2520Gecko/20100101%2520Firefox/31.0	2014-08-28	-	-	Miss	UJZErcBpEDqVGccZsEOfXDdIU7E1M5GyQBJMBKAUk4kr75QWLUKX8g==	example.cloudfront.net	http	414	0.043
