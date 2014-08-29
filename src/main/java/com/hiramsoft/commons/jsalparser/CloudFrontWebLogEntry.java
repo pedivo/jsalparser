@@ -1,4 +1,4 @@
-package com.hiramsoft.jsalparser;
+package com.hiramsoft.commons.jsalparser;
 
 import org.joda.time.DateTime;
 

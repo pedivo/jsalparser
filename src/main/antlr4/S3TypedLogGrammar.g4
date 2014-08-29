@@ -3,7 +3,7 @@ grammar S3TypedLogGrammar;
 import S3Tokens;
 
 @header{
-	package com.hiramsoft.jsalparser;
+	package com.hiramsoft.commons.jsalparser;
 }
 
 file [IS3LogVisitor visitor]

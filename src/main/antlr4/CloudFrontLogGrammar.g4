@@ -2,7 +2,7 @@ grammar CloudFrontLogGrammar;
 
 @header{
 
-	package com.hiramsoft.jsalparser;
+	package com.hiramsoft.commons.jsalparser;
 }
 
 @members{

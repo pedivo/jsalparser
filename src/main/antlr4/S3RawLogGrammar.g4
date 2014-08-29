@@ -2,7 +2,7 @@ grammar S3RawLogGrammar;
 
 @header{
 
-	package com.hiramsoft.jsalparser;
+	package com.hiramsoft.commons.jsalparser;
 }
 
 import S3Tokens;

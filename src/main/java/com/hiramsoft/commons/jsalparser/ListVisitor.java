@@ -1,4 +1,4 @@
-package com.hiramsoft.jsalparser;
+package com.hiramsoft.commons.jsalparser;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,11 @@
-package com.hiramsoft.jsalparser;
+package com.hiramsoft.commons.jsalparser;
 
-import com.hiramsoft.jsalparser.CloudFrontLogGrammarLexer;
-import com.hiramsoft.jsalparser.CloudFrontLogGrammarParser;
+import com.hiramsoft.commons.jsalparser.CloudFrontLogGrammarLexer;
+import com.hiramsoft.commons.jsalparser.CloudFrontLogGrammarParser;
 import org.antlr.v4.runtime.ANTLRInputStream;
-import com.hiramsoft.jsalparser.S3TypedLogGrammarLexer;
+import com.hiramsoft.commons.jsalparser.S3TypedLogGrammarLexer;
 import org.antlr.v4.runtime.CommonTokenStream;
-import com.hiramsoft.jsalparser.S3TypedLogGrammarParser;
+import com.hiramsoft.commons.jsalparser.S3TypedLogGrammarParser;
 
 import java.io.IOException;
 import java.io.InputStream;

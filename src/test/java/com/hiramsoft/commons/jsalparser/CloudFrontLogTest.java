@@ -1,4 +1,4 @@
-package com.hiramsoft.jsalparser;
+package com.hiramsoft.commons.jsalparser;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
