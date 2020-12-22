@@ -59,7 +59,7 @@ public class S3LogTest
 
 		assertEquals(entry.getBucketOwner(), "1f000000000c6c88eb9dd89c000000000b35b0000000a5");
 		assertEquals(entry.getBucket(), "www.example.com");
-		assertEquals(entry.getTime(), OffsetDateTime.of(2014, 8, 27, 20, 20, 5, 0, ZoneOffset.UTC));
+		assertEquals(entry.getTime(), OffsetDateTime.of(2014, 8, 27, 20, 20, 5, 0, ZoneOffset.UTC).toLocalDateTime());
 		assertEquals(entry.getRemoteIpAddress(), "192.168.0.1");
 		assertEquals(entry.getRequester(), null);
 		assertEquals(entry.getRequestId(), "BFE596E2F4D94C8F");

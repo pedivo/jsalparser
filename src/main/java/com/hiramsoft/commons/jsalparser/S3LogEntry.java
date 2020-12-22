@@ -1,8 +1,12 @@
 package com.hiramsoft.commons.jsalparser;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 /**
  * Created by ihiram on 8/27/14.
@@ -11,11 +15,11 @@ public class S3LogEntry {
     // http://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html
 
     // [27/Aug/2014:20:19:42 +0000]
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMM/yyyy:HH:mm:ss Z");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMM/yyyy:HH:mm:ss Z", Locale.ENGLISH);
 
     private String bucketOwner;
     private String bucket;
-    private OffsetDateTime time;
+    private LocalDateTime time;
     private String remoteIpAddress;
     private String requester;
     private String requestId;
@@ -32,6 +36,7 @@ public class S3LogEntry {
     private String userAgent;
     private String versionId;
     private ArrayList<String> extras;
+    private Map<String, String> metadata;
 
     public S3LogEntry() {
         extras = new ArrayList<>();
@@ -57,17 +62,17 @@ public class S3LogEntry {
         this.bucket = bucket;
     }
 
-    public OffsetDateTime getTime() {
+    public LocalDateTime getTime() {
         return time;
     }
 
-    public void setTime(OffsetDateTime time) {
+    public void setTime(LocalDateTime time) {
         this.time = time;
     }
 
     // convenience so we don't have to put the format into the
     public void parseTime(String input) {
-        time = OffsetDateTime.parse(input, formatter);
+        time = OffsetDateTime.parse(input, formatter).toLocalDateTime();
     }
 
     public String getRemoteIpAddress() {
@@ -190,4 +195,15 @@ public class S3LogEntry {
         this.versionId = versionId;
     }
 
+    public void addMetadata(Map<String, String> metadata) {
+        if (this.metadata == null) {
+            this.metadata = new HashMap<>();
+        }
+
+        this.metadata.putAll(metadata);
+    }
+
+    public Map<String, String> getMetadata() {
+        return this.metadata;
+    }
 }
